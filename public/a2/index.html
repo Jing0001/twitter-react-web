@@ -76,7 +76,7 @@ My favorite books (in no particular order)
     <tr>
         <td colspan="3">Average</td>
         <td>90</td>
-    </tr>
+    </tr>teslabot.jpg
     </tfoot>
 </table>
 <h2>Image tag</h2>
@@ -205,5 +205,93 @@ Please
 to get dummy text<br/>
 
 Checkout my <a href="other-page.html">other page</a>
+<h3>Table of content</h3>
+<ul>
+    <li>
+        <a name="embedding-website"></a>
+        <a href="#embedding-website">Embedding other websites</a>
+    </li>
+    <li>
+        <a name="embedding-youtube"></a>
+        <a href="#embedding-youtube">Embedding YouTube</a>
+    </li>
+    <li>
+        <a name="embedding-slides"></a>
+        <a href="#embedding-slides">Embedding Google slides</a>
+    </li>
+</ul>
+<a name="embedding-website"></a>
+<h2>Embedding other websites</h2>
+<a href="#top">Top</a><br/>
+<iframe width="600"
+        height="400"
+        src="https://en.wikipedia.org/wiki/SpaceX">
+</iframe>
+
+<a name="embedding-youtube"></a>
+<h2>Embedding YouTube</h2>
+<a href="#top">Top</a><br/>
+<iframe width="560"
+        height="315"
+        src="https://www.youtube.com/embed/7CZTLogln34"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+</iframe>
+
+<a name="embedding-slides"></a>
+<h2>Embedding Google slides</h2>
+<a href="#top">Top</a><br/>
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQoIYM2gXzRLKt4q5D2-ZahG7zvVcAipkRvj5k9GVLiGDs8NPlLpO3Q08cPUKQbqhL6g8aZp1ZJSwrw/embed?start=false&loop=false&delayms=3000"
+        frameborder="0"
+        width="680"
+        height="418"
+        allowfullscreen="true"
+        mozallowfullscreen="true"
+        webkitallowfullscreen="true">
+</iframe>
+
+<h3>Table of content</h3>
+<ul>
+    <li>
+        <a name="rec"></a>
+        <a href="#rec">Drawing rectangles</a>
+    </li>
+    <li>
+        <a name="cir"></a>
+        <a href="#cir">Drawing circles</a>
+    </li>
+    <li>
+        <a name="pol"></a>
+        <a href="#pol">Drawing polygons</a>
+    </li>
+</ul>
+
+<a name="rec"></a>
+<h2>Drawing rectangles</h2>
+<a href="#top">Top</a><br/>
+<svg width="300" height="100">
+    <rect width="300" height="100"
+          style="fill:rgb(0,0,255); stroke-width:10;
+   stroke:rgb(0,0,0)" />
+</svg>
+
+<a name="cir"></a>
+<h2>Drawing circles</h2>
+<a href="#top">Top</a><br/>
+<svg width="100" height="100">
+    <circle cx="50" cy="50" r="40"
+            stroke="green" stroke-width="4" fill="yellow" />
+</svg>
+
+<a name="pol"></a>
+<h2>Drawing polygons</h2>
+<a href="#top">Top</a><br/>
+<svg width="300" height="200">
+    <polygon points="100,10 40,198 190,78 10,78 160,198"
+             style="fill:lime; stroke:purple; stroke-width:5; fill-rule:evenodd;" />
+</svg>
+
 </body>
 </html>
