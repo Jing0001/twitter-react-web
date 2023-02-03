@@ -536,7 +536,7 @@ and (max-width: 1300px) {
     }
 }
 @media (min-width: 1300px)
-and (max-width: 1800px) {
+and (max-width: 1700px) {
     body {
         background-color: lightpink;
         color: white;
