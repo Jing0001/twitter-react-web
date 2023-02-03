@@ -20,7 +20,7 @@ body {
     /*margin-left: 16px;*/
     margin-top: 12px;
     font-size: 20px;
-    margin-bottom: 1px;
+    margin-bottom: -11px;
 }
 
 .wd-handle {
@@ -86,7 +86,7 @@ body {
     margin-right: 16px;
     margin-top: 12px;
     margin-bottom: 12px;
-    /*max-width: 506px;*/
+    max-width: 506px;
 }
 
 .wd-other-content {
