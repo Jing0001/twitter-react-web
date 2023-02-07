@@ -4,102 +4,248 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link href="index.css" rel="stylesheet"/>
+    <link href="../../vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../vendors/fontawesome/css/all.css" rel="stylesheet"/>
 </head>
 <body>
-<div>
-    <!--search bar-->
-    <input class="wd-search" placeholder="&#128269    Search Tuiter" type="text"/>
-    <a class="wd-gear" href="explore-settings.html">&#9881;</a>
-    <!--navigation bar-->
-    <ul class="wd-nav-bar">
-        <li class="wd-selected"><a href="#">For you</a></li>
-        <li class="wd-unselected"><a href="#">Trending</a></li>
-        <li class="wd-unselected"><a href="#">COVID-19</a></li>
-        <li class="wd-unselected"><a href="#">News</a></li>
-        <li class="wd-unselected"><a href="#">Sports</a></li>
-        <li class="wd-unselected"><a href="#">Entertainment</a></li>
-    </ul>
-</div>
-<div>
-    <hr class="wd-divider">
-</div>
-<!-- posts labeled C: trending in science-->
-<div>
-    <div class="wd-post">
-        <span class="wd-white-dots">&#8943;</span>
-        <p class="wd-topic">Trending in Science</p>
-        <span class="wd-grey-dots">&#8943;</span>
-        <h3 class="wd-title">Startship</h3>
-        <p class="wd-num">55.5K Tweets</p>
+<div class="container pt-3">
+    <div class="row">
+        <!--left navigation bar-->
+        <div class="col-2 col-sm-2 col-md-2 col-lg-1 col-xl-2 col-xxl-2">
+            <ul class="nav flex-column mb-3 mb-sm-0 list-group">
+
+                <li class="list-group-item list-group-item-action"><i class="fab fa-twitter"></i></li>
+                <li class="list-group-item list-group-item-action d-inline-flex justify-content-start">
+                    <a href="https://a3--super-torrone-492cfb.netlify.app/tuiter/home.html" style="color: black">
+                        <i class="fas fa-home" style="color: black; padding-right: 10px;"></i><span
+                            class="d-none d-xxl-inline-block">Home</span></a>
+                </li>
+
+                <li class="list-group-item list-group-item-action active d-inline-flex justify-content-start">
+                    <a href="https://a3--super-torrone-492cfb.netlify.app/tuiter/explore.html" style="color: white">
+                        <i class="fas fa-hashtag" style="color: white; padding-right: 10px;"></i><span
+                            class="d-none d-xxl-inline-block ms-1"> Explore</span></a>
+                </li>
+
+                <li class="list-group-item list-group-item-action d-inline-flex justify-content-start">
+                    <a href="https://a3--super-torrone-492cfb.netlify.app/tuiter/notification.html"
+                       style="color: black">
+                        <i class="fas fa-bell" style="color: black; padding-right: 10px;"></i><span
+                            class="d-none d-xxl-inline-block ms-1"> Notifications</span></a>
+                </li>
+
+                <li class="list-group-item list-group-item-action d-inline-flex justify-content-start">
+                    <a href="https://a3--super-torrone-492cfb.netlify.app/tuiter/message.html" style="color: black">
+                        <i class="fas fa-envelope" style="color: black; padding-right: 10px;"></i><span
+                            class="d-none d-xxl-inline-block ms-1"> Messages</span></a>
+                </li>
+
+                <li class="list-group-item list-group-item-action d-inline-flex justify-content-start">
+                    <a href="https://a3--super-torrone-492cfb.netlify.app/tuiter/bookmarks.html" style="color: black">
+                        <i class="fas fa-bookmark" style="color: black; padding-right: 10px;"></i><span
+                            class="d-none d-xxl-inline-block ms-2"> Bookmarks</span></a>
+                </li>
+
+                <li class="list-group-item list-group-item-action d-inline-flex justify-content-start">
+                    <a href="https://a3--super-torrone-492cfb.netlify.app/tuiter/list.html" style="color: black">
+                        <i class="fas fa-list" style="color: black; padding-right: 10px;"></i><span
+                            class="d-none d-xxl-inline-block ms-1"> Lists</span></a>
+                </li>
+
+                <li class="list-group-item list-group-item-action d-inline-flex justify-content-start">
+                    <a href="https://a3--super-torrone-492cfb.netlify.app/tuiter/profile.html" style="color: black">
+                        <i class="fas fa-user" style="color: black; padding-right: 10px;"></i><span
+                            class="d-none d-xxl-inline-block d-xl-inline-block ms-2"> Profile</span></a>
+                </li>
+
+                <li class="list-group-item list-group-item-action d-inline-flex justify-content-start">
+                    <a href="#" style="color: black">
+                        <i class="fas fa-ellipsis-h" style="color: black; padding-right: 10px;"></i><span
+                            class="d-none d-xxl-inline-block d-xl-inline-block ms-2"> More</span></a>
+                </li>
+            </ul>
+
+            <button class="btn btn-primary w-100 rounded-pill mt-2">
+                Tuit
+            </button>
+        </div>
+
+        <!--middle main content-->
+        <div class="col-10 col-sm-10 col-md-9 col-lg-7 col-xl-6">
+            <div class="row">
+                <div class="col-10">
+                    <div class="position-relative">
+                        <span class="wd-search-tuits position-absolute"><i
+                                class="fas fa-search"></i></span>
+                        <input class="form-control rounded-pill ps-5 mb-1" placeholder="Search Tuiter" type="text"/>
+                    </div>
+                </div>
+                <div class="col-2 mt-1">
+                    <i class="fas fa-cog fa-2x" style="color:#0b64e8"></i>
+                </div>
+            </div>
+            <ul class="nav nav-tabs mt-1 mb-2">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">For you</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Trending</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">News</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Sports</a>
+                </li>
+                <li class="nav-item d-none d-md-block">
+                    <a class="nav-link" href="#">Entertainment</a>
+                </li>
+            </ul>
+            <div class="row mt-1 position-relative">
+                <img class="card-img-bottom" src="space.jpg" width="100%">
+                <h2 class="text-white position-absolute bottom-0 left-0">SpaceX's Starship</h2>
+            </div>
+
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <div class="row">
+                        <div class="col-10">
+                            <div class="text-secondary">Web Development</div>
+                            <div class="fw-bolder">ReactJS <i class="fas fa-check-circle"></i> <span
+                                    class="text-secondary fw-normal">- 2h</span></div>
+                            <div class="fw-bolder">React.js is a component based front end library that makes it very
+                                easy to build Single Page Applications or SPAs
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <img class="float-end img-fluid mb-1 rounded" src="react.jpg" width="100%" height="100%"/>
+                        </div>
+                    </div>
+                </li>
+                </li>
+                <li class="list-group-item">
+                    <div class="row">
+                        <div class="col-10">
+                            <div class="fw-bolder">JavaScript <i class="fas fa-check-circle"></i> <span
+                                    class="text-secondary fw-normal">- 2h</span></div>
+                            <div class="fw-bolder">JavaScript is programming language that can run on browsers as well
+                                as desktops
+                            </div>
+                            <div class="text-secondary">123K Tuits</div>
+                        </div>
+                        <div class="col-2">
+                            <img class="rounded float-end img-fluid mb-1 rounded" src="js.jpg" width="100%"
+                                 height="100%"/>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="row">
+                        <div class="col-10">
+                            <div class="text-secondary">Web Development</div>
+                            <div class="fw-bolder">jQuery</div>
+                            <div class="text-secondary">123K Tuits</div>
+                        </div>
+                        <div class="col-2">
+                            <img class="float-end img-fluid mb-1 rounded" src="jq.jpg" width="100%" height="100%"/>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="row">
+                        <div class="col-10">
+                            <div class="text-secondary">Web Development</div>
+                            <div class="fw-bolder">NodeJS <i class="fas fa-check-circle"></i> <span
+                                    class="text-secondary fw-normal">- 2h</span></div>
+                            <div class="text-secondary">123K Tuits</div>
+                        </div>
+                        <div class="col-2">
+                            <img class="float-end img-fluid mb-1 rounded" src="jss.jpg" width="100%" height="100%"/>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!--right follow section-->
+        <div class="col-lg-4 col-xl-4 col-xxl-4 d-none d-lg-block">
+            <ul class="list-group">
+                <li class="list-group-item fw-bold pb-2">Who to follow</li>
+                <li class="list-group-item">
+                    <div class="row">
+                        <div class="col-2 pe-1">
+                            <img class="rounded-circle" src="java.jpg" width="100%" height="100%"/>
+                        </div>
+                        <div class="col-7 ps-1">
+                            <div class="fw-bold">Java<i class="fas fa-check-circle ms-2"></i></div>
+                            <div>@Java</div>
+                        </div>
+                        <div class="col-3 ps-0">
+                            <button class="btn btn-primary mt-2 rounded-pill">Follow</button>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="row">
+                        <div class="col-2 pe-sm-0">
+                            <img class="rounded-circle img-fluid w-100" src="rs.jpg" width="100%" height="100%"/>
+                        </div>
+                        <div class="col-7 ps-1 pe-1">
+                            <div class="fw-bolder">Relativity Space<i class="fas fa-check-circle ms-2"></i></div>
+                            <div>@relativityspace</div>
+                        </div>
+                        <div class="col-3 ps-0">
+                            <button class="btn btn-primary mt-2 rounded-pill">Follow</button>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="row">
+                        <div class="col-2 pe-1">
+                            <a href="https://cdnlogo.com/logo/virgin_41418.html">
+                                <img class="rounded-circle" src="https://cdn.cdnlogo.com/logos/v/11/virgin.svg"
+                                     width="100%" height="100%"></a>
+                        </div>
+                        <div class="col-7 ps-1">
+                            <div class="fw-bolder">Virgin Galactic<i class="fas fa-check-circle ms-2"></i></div>
+                            <div>@virgingalactic</div>
+                        </div>
+                        <div class="col-3 ps-0">
+                            <button class="btn btn-primary mt-2 rounded-pill">Follow</button>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="row">
+                        <div class="col-2 pe-1">
+                            <img class="rounded-circle mt-2" src="nasa.jpg" width="100%" height="100%"/>
+                        </div>
+                        <div class="col-7 ps-1">
+                            <div class="fw-bolder">NASA<i class="fas fa-check-circle ms-2"></i></div>
+                            <div>@NASA</div>
+                        </div>
+                        <div class="col-3 ps-0">
+                            <button class="btn btn-primary mt-2 rounded-pill">Follow</button>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="row">
+                        <div class="col-2 pe-1">
+                            <img class="rounded-circle mw-100" src="tesla.png" width="100%" height="100%"/>
+                        </div>
+                        <div class="col-7 ps-1">
+                            <div class="fw-bolder">Tesla<i class="fas fa-check-circle ms-2"></i></div>
+                            <div>@Tesla</div>
+                        </div>
+                        <div class="col-3 ps-0">
+                            <button class="btn btn-primary mt-2 rounded-pill">Follow</button>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
     </div>
 </div>
-<!--posts labeled C: sports trending-->
-<div>
-    <div class="wd-post">
-        <p class="wd-topic">Sports · Trending</p>
-        <span class="wd-grey-dots">&#8943;</span>
-        <h3 class="wd-title">Joe Rogan</h3>
-        <p class="wd-num">5,218 Tweets</p>
-    </div>
-</div>
-<div>
-    <hr class="wd-divider">
-</div>
-<!--posts labeled D: The New York Times-->
-<div class="wd-post">
-    <img class="wd-img" src="nyt.jpg">
-    <span class="wd-author">The New York Times</span>
-    <span class="wd-time"> · Yesterday</span>
-    <h3 class="wd-title">CNN's cuomo conumdrum: A star anchor with a brother in trouble</h3>
-</div>
-<div>
-    <br>
-    <br>
-    <hr class="wd-divider">
-</div>
-<!--posts labeled E: COVID-19-->
-<div class="wd-post">
-    <img class="wd-img" src="covid.png">
-    <span class="wd-time">COVID-19 · LIVE</span>
-    <h3 class="wd-title">COVID-19: News and updates for Massachusetts</h3>
-</div>
-<div>
-    <br>
-    <br>
-    <hr class="wd-divider">
-</div>
-<!--posts labeled E: World Cup-->
-<div class="wd-post">
-    <img class="wd-img" src="cup.jpg">
-    <span class="wd-time">World Cup · LIVE</span>
-    <h3 class="wd-title">2022 FIFA World Cup: TOP TEN MOMENTS of the tournament</h3>
-</div>
-<div>
-    <br>
-    <br>
-    <hr class="wd-divider">
-</div>
-<!--posts labeled D: Bloomberg-->
-<div class="wd-post">
-    <img class="wd-img" src="bbg.jpg">
-    <span class="wd-author">Bloomberg Opinion</span>
-    <span class="wd-time"> · Yesterday</span>
-    <h3 class="wd-title">Thinking about getting a booster? Read this first.</h3>
-</div>
-<div>
-    <br>
-    <br>
-    <hr class="wd-divider">
-</div>
-<!--<div class="wd-trending">-->
-<!--    <br>-->
-<!--    <span class="wd-topic">Trending in United States</span>-->
-<!--    <span class="wd-grey-dots">&#8943;</span>-->
-<!--    <h3 class="wd-title">Wonder Bread</h3>-->
-<!--    <p class="wd-num">1,259 Tweets</p>-->
-<!--</div>-->
-<!--<div>-->
-<!--    <hr class="wd-divider">-->
-<!--</div>-->
 </body>
 </html>
