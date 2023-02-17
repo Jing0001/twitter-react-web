@@ -2,6 +2,7 @@ import NavigationSidebar from "../NavigationSidebar/index.js";
 import WhoToFollowList from "../WhoToFollowList/index.js";
 import ExploreComponent1 from "./ExploreComponent1.js";
 function exploreComponent() {
+    let active = 'explore';
     $('#wd-explore').append(`
 <!--       <h2>Explore</h2>-->
   <div class="row mt-2">
@@ -19,6 +20,6 @@ function exploreComponent() {
    </div>
   </div>
    `);
-    // $("#liexplore").addClass("active");
+    $("#explore1").addClass("active");
 }
 $(exploreComponent);
