@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import {useLocation} from "react-router";
 
-
 const NavigationSidebar = (
     {
         active = 'explore'
@@ -14,10 +13,12 @@ const NavigationSidebar = (
     return (
         <div className="list-group">
             <a className="list-group-item d-inline-flex justify-content-start">
+                <i className="fab fa-twitter"></i>
                 <span className="d-none d-xl-block">Tuiter</span>
             </a>
             <Link to="/tuiter/home"
                   className={`list-group-item wd-noLinkLineDecor ${active === 'home' ? 'active' : ''}`}>
+                <i className="fas fa-home wd-width20 wd-whiteFont"></i>
                 <span className="d-none d-xl-inline">Home</span>
             </Link>
 
