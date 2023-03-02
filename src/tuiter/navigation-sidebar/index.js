@@ -12,7 +12,7 @@ const NavigationSidebar = () => {
 
     return (
         <div className="list-group">
-            <Link to={"/tuiter"} className={`list-group-item`}>
+            <Link to={"/"} className={`list-group-item`}>
                 <div className="d-none d-xl-block">
                     <i className="bi bi-twitter  mt-1 me-1"></i>
                     Tuiter
