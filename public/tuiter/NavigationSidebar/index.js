@@ -11,7 +11,7 @@ const NavigationSidebar = (activeElement) => {
         <a href="../HomeScreen/index.html" id="home1" class="list-group-item list-group-item-action d-inline-flex justify-content-start">
             <i class="fas fa-home mt-1"></i>
             <span class="d-none d-xl-block ms-1">Home</span></a>
-        <a href="../explore/index.html" id="explore1" class="list-group-item list-group-item-action d-inline-flex justify-content-start">
+        <a href="../exploreScreen/index.html" id="explore1" class="list-group-item list-group-item-action d-inline-flex justify-content-start">
             <i class="fas fa-hashtag mt-1"></i>
             <span class="d-none d-xl-block ms-1">Explore</span></a>
         <a href="#" class="list-group-item list-group-item-action d-inline-flex justify-content-start">

@@ -1,0 +1,34 @@
+[
+  {
+    "icon": "../../images/bird.png",
+    "userName": "Elon Musk",
+    "verified": true,
+    "handleName": "elonmusk",
+    "time": "23h",
+    "topTitle": "Amazing show about @Inspiration4x mission!",
+    "markText": "@Inspiration4x",
+    "image": "../../images/nt.jpg",
+    "title": "Countdown: Inspiration4 Mission to Space | Netflix Official Site",
+    "content": "From training to launch to landing , this all access docuseriesrides along with the Inspiration4 crew on the first all civilian orbital space...",
+    "link": "netflix.com",
+    "comment": "4.2K",
+    "retuit": "3.5K",
+    "like": "37.5K"
+  },
+  {
+    "icon": "../../images/alice.jpg",
+    "userName": "New York Post",
+    "verified": true,
+    "handleName": "nypost",
+    "time": "23h",
+    "topTitle": "Hi, this is New York Post. Happy reading!",
+    "markText":"",
+    "image": "../../images/gr.jpg",
+    "title": "",
+    "content": "",
+    "link": "",
+    "comment": "965",
+    "retuit": "2.4K",
+    "like": "4K"
+  }
+]
