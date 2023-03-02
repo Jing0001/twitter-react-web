@@ -10,9 +10,9 @@ function Assignment6() {
             <h1>Assignment 6</h1>
             <Classes/>
             <Styles/>
+            <TodoItem/>
             <ConditionalOutput/>
             <TodoList/>
-            {/*<TodoItem/>*/}
         </div>
     )
 }
