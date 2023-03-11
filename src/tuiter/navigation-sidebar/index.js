@@ -7,7 +7,7 @@ const NavigationSidebar = () => {
     const paths = pathname.split('/')
     let active = paths[2];
     if (active === "" || active === undefined) {
-        active = "explore";
+        active = "home";
     }
 
     return (

@@ -1,0 +1,42 @@
+[{ "_id": 123,
+  "topic": "Space",
+  "userName": "SpaceX",
+  "title": "Tesla Cybertruck lands on Mars and picks up the Curiosity rover on its 6' bed",
+  "time": "2h",
+  "image": "../../images/sx.png",
+  "liked": false,
+  "replies": 123,
+  "retuits": 234,
+  "likes": 4567,
+  "handle": "@spacex",
+  "tuit": "This is my second tuit."
+
+},
+{
+"_id": 234,
+"topic": "Space",
+"userName": "Tesla",
+"title": "100s of SpaceX Starships land on Mars after a 6 month journey. 1000s of Martian colonists being building Mars Base 1",
+"time": "4d",
+"image": "../../images/tesla.png",
+"liked": false,
+"replies": 666,
+"retuits": 222,
+"likes": 3333,
+"handle": "@tesla",
+"tuit": "This is my first tuit."
+},
+  {
+    "_id": 345,
+    "topic": "Energy",
+    "userName": "SpaceX",
+    "title": "Tesla FSD finally makes driving obsolete. After years of delay, Tesla Full Self Driving can drive you to work while you work, play, or sleep",
+    "time": "2h",
+    "image": "../../images/sx.png",
+    "liked": false,
+    "replies": 888,
+    "retuits": 111,
+    "likes": 2322,
+    "handle": "@spacex",
+    "tuit": "Hi everyone! This is my first tuit."
+  }]
