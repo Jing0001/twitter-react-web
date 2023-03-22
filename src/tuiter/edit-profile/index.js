@@ -16,9 +16,7 @@ const EditProfile = () => {
     const saveEdit = () => {
         const newFirstName = userName.split(" ")[0];
         let newHandle = "@" + userName;
-        newHandle = newHandle.replace(/\s/g, '');
-        newHandle = newHandle.toLowerCase();
-
+        newHandle = newHandle.replace(/\s/g, '').toLowerCase();
         dispatch(updateUser({
             ...profile,
             firstName: newFirstName,
