@@ -18,6 +18,7 @@ function Tuiter() {
                     <Route index element={<ExploreComponent/>}/>
                     <Route path="home" element={<PostList/>}/>
                     <Route path="explore" element={<ExploreComponent/>}/>
+                    <Route path="tuiter"  element={<ExploreComponent/>}/>
                 </Routes>
             </div>
             <div className="d-none d-sm-none d-md-none d-lg-block col-lg-4 col-xl-4">
