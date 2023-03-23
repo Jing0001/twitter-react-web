@@ -3,9 +3,7 @@ import {useSelector} from "react-redux";
 import TuitItem from "./tuit-item";
 
 const TuitsList = () => {
-    const selectAllTuits = (state) => state.tuits;
-    const tuits = useSelector(selectAllTuits);
-
+    const tuits = useSelector(state => state.tuits)
     return (
         <ul className="list-group">
             {

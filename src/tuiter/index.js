@@ -1,6 +1,6 @@
 import React from "react";
 import ExploreComponent from "./explore";
-import HomeScreen from "./home"
+import HomeComponent from "./home"
 import NavigationSidebar from "./navigation-sidebar";
 import WhoToFollowList from "./who-to-follow-list";
 import ProfileComponent from "./profile";
@@ -28,8 +28,8 @@ function Tuiter() {
             <div className="col-10 col-lg-7 col-xl-6"
                  style={{"position": "relative"}}>
                 <Routes>
-                    <Route index element={<HomeScreen/>}/>
-                    <Route path="home" element={<HomeScreen/>}/>
+                    <Route index element={<HomeComponent/>}/>
+                    <Route path="home" element={<HomeComponent/>}/>
                     <Route path="explore" element={<ExploreComponent/>}/>
                     <Route path="profile" element={<ProfileComponent/>}/>
                     <Route path="edit-profile" element={<EditProfile/>}/>
