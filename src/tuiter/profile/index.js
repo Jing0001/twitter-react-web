@@ -15,7 +15,6 @@ const ProfileComponent = () => {
         day: 'numeric',
         year: 'numeric'
     });
-    const navigate = useNavigate();
 
     return (
         <>

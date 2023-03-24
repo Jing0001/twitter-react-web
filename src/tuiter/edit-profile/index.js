@@ -4,7 +4,6 @@ import {useDispatch, useSelector} from "react-redux";
 import {updateUser} from "../reducers/profile-reducer";
 
 const EditProfile = () => {
-    const font_size = {"fontSize": "16px"}
     const dispatch = useDispatch();
     const profile = useSelector((state) => state.profile);
     const [userName, setUserName] = useState(profile.firstName + " " + profile.lastName);
@@ -86,7 +85,7 @@ const EditProfile = () => {
                            onChange={(event) => setWebsite(event.target.value)}/>
                 </div>
                 <div className="mt-4">
-                    <div className="text-secondary" style={font_size}>
+                    <div className="text-secondary" style={{"fontSize": "16px"}}>
                         Birth Date .
                         {edit && <button className="border-0 text-primary bg-transparent"
                                          onClick={() => setEdit(false)}>Edit</button>}
