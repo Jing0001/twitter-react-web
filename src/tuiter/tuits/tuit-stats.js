@@ -1,5 +1,6 @@
 import React from "react";
-import {likeTuit, unlikeTuit} from "../reducers/tuits-reducer";
+import {updateTuitThunk} from "../../services/tuits-thunks";
+// import {likeTuit, unlikeTuit} from "../reducers/tuits-reducer";
 import {useDispatch} from "react-redux";
 
 const TuitStats = (
@@ -7,11 +8,25 @@ const TuitStats = (
 ) => {
     const dispatch = useDispatch();
     const likeTuitHandler = (tuit) => {
-        dispatch(likeTuit(tuit));
+        dispatch(updateTuitThunk({
+            ...tuit,
+            likes: tuit.likes + 1,
+            liked: true
+        }));
     }
     const unlikeTuitHandler = (tuit) => {
-        dispatch(unlikeTuit(tuit));
+        dispatch(updateTuitThunk({
+            ...tuit,
+            likes: tuit.likes - 1,
+            liked: false
+        }));
     }
+    // const likeTuitHandler = (tuit) => {
+    //     dispatch(likeTuit(tuit));
+    // }
+    // const unlikeTuitHandler = (tuit) => {
+    //     dispatch(unlikeTuit(tuit));
+    // }
     return(
         <div className="row text-secondary mt-3">
             <div className="col"><i className="bi bi-chat me-2"></i> {tuit.replies}</div>
