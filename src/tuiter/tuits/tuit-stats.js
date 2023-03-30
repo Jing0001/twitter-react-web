@@ -21,12 +21,20 @@ const TuitStats = (
             liked: false
         }));
     }
-    // const likeTuitHandler = (tuit) => {
-    //     dispatch(likeTuit(tuit));
-    // }
-    // const unlikeTuitHandler = (tuit) => {
-    //     dispatch(unlikeTuit(tuit));
-    // }
+    const dislikeTuitHandler = (tuit) => {
+        dispatch(updateTuitThunk({
+            ...tuit,
+            dislikes: tuit.dislikes + 1,
+            disliked: true
+        }));
+    }
+    const undislikeTuitHandler = (tuit) => {
+        dispatch(updateTuitThunk({
+            ...tuit,
+            dislikes: tuit.dislikes - 1,
+            disliked: false
+        }));
+    }
     return(
         <div className="row text-secondary mt-3">
             <div className="col"><i className="bi bi-chat me-2"></i> {tuit.replies}</div>
@@ -35,6 +43,11 @@ const TuitStats = (
                 {tuit.liked && <i onClick={() => unlikeTuitHandler(tuit)} className="bi bi-heart-fill text-danger"></i>}
                 {!tuit.liked && <i onClick={() => likeTuitHandler(tuit)} className="bi bi-heart me-2"></i>}
                 {tuit.likes}
+            </div>
+            <div className="col">
+                {tuit.disliked && <i onClick={() => undislikeTuitHandler(tuit)} className="bi bi-hand-thumbs-down-fill text-dark"></i>}
+                {!tuit.disliked && <i onClick={() => dislikeTuitHandler(tuit)} className="bi bi-hand-thumbs-down me-2"></i>}
+                {tuit.dislikes}
             </div>
             <div className="col"><i className="bi bi-share"></i></div>
         </div>

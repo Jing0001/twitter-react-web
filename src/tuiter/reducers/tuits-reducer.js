@@ -20,7 +20,9 @@ const templateTuit = {
     "liked": false,
     "replies": 0,
     "retuits": 0,
-    "likes": 0
+    "likes": 0,
+    "dislikes": 0,
+    "disliked": false
 }
 
 const tuitsSlice = createSlice({
@@ -63,7 +65,6 @@ const tuitsSlice = createSlice({
                     ...payload
                 }
             }
-
     },
     reducers: {
         createTuit(state, action) {
@@ -87,8 +88,18 @@ const tuitsSlice = createSlice({
             state[tuitIndex].liked = false;
             state[tuitIndex].likes -= 1;
         },
+        dislikeTuit(state, action) {
+            const tuitIndex = state.findIndex((tuit) => tuit._id === action.payload._id)
+            state[tuitIndex].disliked = true;
+            state[tuitIndex].dislikes += 1;
+        },
+        undislikeTuit(state, action) {
+            const tuitIndex = state.findIndex((tuit) => tuit._id === action.payload._id)
+            state[tuitIndex].disliked = false;
+            state[tuitIndex].dislikes -= 1;
+        },
     }
 });
 
-export const {createTuit, deleteTuit, likeTuit, unlikeTuit} = tuitsSlice.actions;
+export const {createTuit, deleteTuit, likeTuit, unlikeTuit, dislikeTuit, undislikeTuit} = tuitsSlice.actions;
 export default tuitsSlice.reducer;
