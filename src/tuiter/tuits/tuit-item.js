@@ -18,10 +18,10 @@ const TuitItem = (
                 </div>
                 <div className="col-10">
                     <div>
-                        <div className="fw-bold">{tuit.userName}<i className="bi bi-check-circle-fill text-primary ms-2 me-1"></i><span
-                            className="fw-normal text-secondary"> {tuit.handle} • {tuit.time}</span></div>
                         <i className="bi bi-x-lg float-end"
                            onClick={() => deleteTuitHandler(tuit._id)}></i>
+                        <div className="fw-bold">{tuit.userName}<i className="bi bi-check-circle-fill text-primary ms-2 me-1"></i><span
+                            className="fw-normal text-secondary"> {tuit.handle} • {tuit.time}</span></div>
                     </div>
                     <div>{tuit.tuit}</div>
                     <TuitStats tuit={tuit}/>
