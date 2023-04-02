@@ -6,11 +6,12 @@ import {findTuitsThunk} from "../../services/tuits-thunks";
 
 const PostSummaryList = () => {
     // const postsArray = useSelector(state => state.tuits)
-    const { postsArray, loading } = useSelector((state) => state.tuitsData);
+    const {postsArray, loading}  = useSelector(state => state.tuitsData)
     const dispatch = useDispatch();
     useEffect(() => {
-        dispatch(findTuitsThunk());
-    }, []);
+        dispatch(findTuitsThunk())
+    }, [dispatch])
+    console.log(postsArray)
     return(
         <ul className="list-group">
             {
