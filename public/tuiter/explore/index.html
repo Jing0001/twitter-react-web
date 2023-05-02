@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link href="index.css" rel="stylesheet"/>
+    <link href="./index.css" rel="stylesheet"/>
     <link href="../../vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="../../vendors/fontawesome/css/all.css" rel="stylesheet"/>
 </head>
@@ -11,14 +11,17 @@
 <div class="container pt-3">
     <div class="row">
         <!--left navigation bar-->
-        <div class="col-2 col-sm-2 col-md-2 col-lg-1 col-xl-2 col-xxl-2">
-            <ul class="nav flex-column mb-3 mb-sm-0 list-group">
+        <!--column width of 2/12 on xl screens, 1/12 on lg screens, 2/12 on md screens,
+        2/12 on sm screens, and 2/12 on xs screens-->
+        <div class="col-xl-2 col-xl-2 col-lg-1 col-md-2 col-sm-2 col-2">
+            <ul class="nav mb-3 mb-sm-0 list-group">
 
                 <li class="list-group-item list-group-item-action"><i class="fab fa-twitter"></i></li>
-                <li class="list-group-item list-group-item-action d-inline-flex justify-content-start">
+                <li class="list-group-item list-group-item-action">
                     <a href="https://a3--super-torrone-492cfb.netlify.app/tuiter/home.html" style="color: black">
-                        <i class="fas fa-home" style="color: black; padding-right: 10px;"></i><span
-                            class="d-none d-xl-inline-block">Home</span></a>
+                        <!--hides on all screen sizes and only displays as an inline-block on xl screens.-->
+                        <i class="fas fa-home" style="padding-right: 10px;"></i><span class="d-none d-xl-inline-block">Home</span>
+                    </a>
                 </li>
 
                 <li class="list-group-item list-group-item-action active d-inline-flex justify-content-start">
@@ -30,37 +33,37 @@
                 <li class="list-group-item list-group-item-action d-inline-flex justify-content-start">
                     <a href="https://a3--super-torrone-492cfb.netlify.app/tuiter/notification.html"
                        style="color: black">
-                        <i class="fas fa-bell" style="color: black; padding-right: 10px;"></i><span
+                        <i class="fas fa-bell" style="padding-right: 10px;"></i><span
                             class="d-none d-xl-inline-block ms-1"> Notifications</span></a>
                 </li>
 
                 <li class="list-group-item list-group-item-action d-inline-flex justify-content-start">
                     <a href="https://a3--super-torrone-492cfb.netlify.app/tuiter/message.html" style="color: black">
-                        <i class="fas fa-envelope" style="color: black; padding-right: 10px;"></i><span
+                        <i class="fas fa-envelope" style="padding-right: 10px;"></i><span
                             class="d-none d-xl-inline-block ms-1"> Messages</span></a>
                 </li>
 
                 <li class="list-group-item list-group-item-action d-inline-flex justify-content-start">
                     <a href="https://a3--super-torrone-492cfb.netlify.app/tuiter/bookmarks.html" style="color: black">
-                        <i class="fas fa-bookmark" style="color: black; padding-right: 10px;"></i><span
+                        <i class="fas fa-bookmark" style="padding-right: 10px;"></i><span
                             class="d-none d-xl-inline-block ms-2"> Bookmarks</span></a>
                 </li>
 
                 <li class="list-group-item list-group-item-action d-inline-flex justify-content-start">
                     <a href="https://a3--super-torrone-492cfb.netlify.app/tuiter/list.html" style="color: black">
-                        <i class="fas fa-list" style="color: black; padding-right: 10px;"></i><span
+                        <i class="fas fa-list" style="padding-right: 10px;"></i><span
                             class="d-none d-xl-inline-block ms-1"> Lists</span></a>
                 </li>
 
                 <li class="list-group-item list-group-item-action d-inline-flex justify-content-start">
                     <a href="https://a3--super-torrone-492cfb.netlify.app/tuiter/profile.html" style="color: black">
-                        <i class="fas fa-user" style="color: black; padding-right: 10px;"></i><span
+                        <i class="fas fa-user" style="padding-right: 10px;"></i><span
                             class="d-none d-xl-inline-block d-xl-inline-block ms-2"> Profile</span></a>
                 </li>
 
                 <li class="list-group-item list-group-item-action d-inline-flex justify-content-start">
                     <a href="#" style="color: black">
-                        <i class="fas fa-ellipsis-h" style="color: black; padding-right: 10px;"></i><span
+                        <i class="fas fa-ellipsis-h" style="padding-right: 10px;"></i><span
                             class="d-none d-xl-inline-block d-xl-inline-block ms-2"> More</span></a>
                 </li>
             </ul>
@@ -68,14 +71,25 @@
             <button class="btn btn-primary w-100 rounded-pill mt-2" >
                 Tuit
             </button>
+
+            <div class="d-block d-sm-none fa-2x">XS</div>
+            <div class="d-none d-sm-block d-md-none fa-2x">S</div>
+            <div class="d-none d-md-block d-lg-none fa-2x">M</div>
+            <div class="d-none d-lg-block d-xl-none fa-2x">L</div>
+            <div class="d-none d-xl-block d-xxl-none fa-2x">XL</div>
+            <div class="d-none d-xxl-block fa-2x">XXL</div>
+
         </div>
 
         <!--middle main content-->
-        <div class="col-10 col-sm-10 col-md-9 col-lg-7 col-xl-6">
+        <!--column width of 6/12 on xl screens, 7/12 on lg screens, 10/12 on md screens,
+        and 10/12 on sm and xs screens.-->
+        <div class="col-xxl-6 col-xl-6 col-lg-7 col-md-10 col-sm-10 col-10 mb-2">
+            <!--search bar-->
             <div class="row">
                 <div class="col-10">
-                    <div class="position-relative">
-                        <span class="wd-search-tuits position-absolute"><i
+                    <div>
+                        <span class="position-absolute"><i
                                 class="fas fa-search"></i></span>
                         <input class="form-control rounded-pill ps-5 mb-1" placeholder="Search Twitter" type="text"/>
                     </div>
@@ -84,6 +98,7 @@
                     <i class="fas fa-cog fa-2x" style="color:#0b64e8"></i>
                 </div>
             </div>
+            <!--top nav bar-->
             <ul class="nav nav-tabs mt-1 mb-2">
                 <li class="nav-item">
                     <a class="nav-link active" href="#">For you</a>
@@ -97,6 +112,8 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">Sports</a>
                 </li>
+                <!--The d-none class hides the column on all screens,
+                while the d-md-block class shows the column on md & larger screens only.-->
                 <li class="nav-item d-none d-md-block">
                     <a class="nav-link" href="#">Entertainment</a>
                 </li>
@@ -105,14 +122,13 @@
                 <img class="card-img-bottom" src="space.jpg" width="100%">
                 <h2 class="text-white position-absolute bottom-0 left-0">SpaceX's Starship</h2>
             </div>
-
             <ul class="list-group">
                 <li class="list-group-item">
                     <div class="row">
                         <div class="col-10">
                             <div class="text-secondary">Web Development</div>
-                            <div class="fw-bolder">ReactJS <i class="fas fa-check-circle"></i> <span
-                                    class="text-secondary fw-normal">- 2h</span></div>
+                            <div class="fw-bolder">ReactJS<i class="fas fa-check-circle"></i>
+                                <span class="text-secondary fw-normal"> - 2h</span></div>
                             <div class="fw-bolder">React.js is a component based front end library that makes it very
                                 easy to build Single Page Applications or SPAs
                             </div>
@@ -167,8 +183,12 @@
             </ul>
         </div>
 
-        <!--right follow section-->
-        <div class="col-lg-4 col-xl-4 col-xxl-4 d-none d-lg-block">
+        <!--right who-to-follow section-->
+        <!--create a column that is visible only on lg and xl screens,
+        and has a width of 4/12 of the container width on lg and xl screens.
+        The d-none class hides the column on all devices,
+        while the d-lg-block class shows the column on lg and xl screens only.-->
+        <div class="col-xxl-4 col-xl-4 col-lg-4 d-none d-lg-block">
             <ul class="list-group">
                 <li class="list-group-item fw-bold pb-2">Who to follow</li>
                 <li class="list-group-item">
@@ -243,7 +263,11 @@
                         </div>
                     </div>
                 </li>
+                <li class="list-group-item nav-link">Show More</li>
             </ul>
+            <p>Terms of Service &nbsp &nbsp  Privacy Policy &nbsp &nbsp  Cookie Policy
+                <br> Accessibility &nbsp  &nbsp  Ads info &nbsp  &nbsp  More...
+                <br>@2023 Twitter, Inc. </p>
         </div>
     </div>
 </div>
