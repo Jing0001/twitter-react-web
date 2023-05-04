@@ -3,9 +3,12 @@ import {Link} from "react-router-dom";
 import {useLocation} from "react-router";
 
 const NavigationSidebar = () => {
+    // uses the useLocation() hook from the react-router-dom package to get the current location pathname.
+    // The pathname variable is then extracted from the location object using destructuring assignment
     const {pathname} = useLocation();
     const paths = pathname.split('/')
     let active = paths[2];
+    // if active is an empty string or undefined, it will be set to the default value of 'explore'
     if (active === "" || active === undefined) {
         active = "explore";
     }

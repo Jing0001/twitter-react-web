@@ -3,6 +3,7 @@ import PostSummaryList from "../post-summary-list";
 import "./index.css";
 const ExploreComponent = () => {
     return(
+        // use React Fragment to replace the <div> element
         <>
             <div className="row">
                 <div className="col-11 position-relative">

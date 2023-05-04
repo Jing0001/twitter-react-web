@@ -14,6 +14,7 @@ function App() {
                            element={<Labs/>}/>
                     <Route path="/hello"
                            element={<HelloWorld/>}/>
+                    {/*For the nested routes to work*/}
                     <Route path="/tuiter/*"
                            element={<Tuiter/>}/>
                 </Routes>

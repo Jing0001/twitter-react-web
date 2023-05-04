@@ -1,7 +1,8 @@
 import React from "react";
 const PostSummaryItem = (
     {
-        post = {
+        post
+            = {
             "topic": "Space",
             "userName": "SpaceX",
             "time": "2h",
