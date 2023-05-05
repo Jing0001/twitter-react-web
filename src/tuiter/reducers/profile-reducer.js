@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const profile = {
-    tuits: 11,
+    tuits: 10,
     firstName: "Jing",
     lastName: "Feng",
     handle: "@jingfeng",

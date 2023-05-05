@@ -3,11 +3,10 @@ import TuitStats from "./tuit-stats";
 import {deleteTuit} from "../reducers/tuits-reducer";
 import {useDispatch} from "react-redux";
 
-const TuitItem = (
-    {tuit}
-) => {
+const TuitItem = ({tuit}) => {
     const dispatch = useDispatch();
     const deleteTuitHandler = (id) => {
+        // pass tuit's ID to reducer
         dispatch(deleteTuit(id));
     }
     return(

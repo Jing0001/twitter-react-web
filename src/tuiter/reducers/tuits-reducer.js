@@ -1,12 +1,16 @@
 import {createSlice} from "@reduxjs/toolkit";
 import tuits from "../tuits/tuits.json";
 
+// create an object that represents the currently logged in user
+// which contains profile information username, their avatar logo, and handle.
 const currentUser = {
     "userName": "NASA",
     "handle": "@nasa",
     "image": "../../images/nasa.jpg"
 };
 
+// create a template tuit object with some default values
+// and copy over the fields userName, handle and image from the currentUser
 const templateTuit = {
     ...currentUser,
     "topic": "Space",
@@ -19,10 +23,14 @@ const templateTuit = {
 
 const tuitsSlice = createSlice({
     name: 'tuits',
+    // set initialState to be the tuits in json file
     initialState: tuits,
     reducers: {
+        // createTuit reducer function: appends the new tuit in the payload
+        // at the beginning of the array of tuits contained in the state.
         createTuit(state, action) {
             state.unshift({
+                // copy all fields from templateTuit and initialize the unique identifier with a timestamp
                 ...action.payload,
                 ...templateTuit,
                 _id: (new Date()).getTime()

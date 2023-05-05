@@ -14,11 +14,13 @@ import { configureStore }
 import {Provider} from "react-redux";
 import tuitsReducer from "./reducers/tuits-reducer";
 
+// configure the store
 const store = configureStore(
     {reducer: {who: whoReducer, tuits: tuitsReducer, profile: profileReducer}});
 
 function Tuiter() {
     return(
+        // provide the store to the rest of the application so it can pull from the global state
         <Provider store={store}>
         <div className="row mt-2">
             <div className="col-2 col-md-2 col-lg-1 col-xl-2">

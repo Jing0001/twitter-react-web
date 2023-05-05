@@ -1,8 +1,9 @@
 import EditProfile from "../edit-profile";
+import Explore from "../explore";
 import React from "react";
 import {useSelector} from "react-redux";
-import {useNavigate} from "react-router";
 import {Link} from "react-router-dom";
+import ExploreComponent from "../explore";
 
 const ProfileComponent = () => {
     const profile = useSelector(state => state.profile)
@@ -10,19 +11,19 @@ const ProfileComponent = () => {
     const month = parseInt(wholeDate[0]) - 1;
     const year = parseInt(wholeDate[1]);
     const dateJoined = new Date(year, month);
-    const bornDate = new Date(profile.dateOfBirth).toLocaleString('en-CA', {
-        month: 'short',
-        day: 'numeric',
-        year: 'numeric'
-    });
+    const bornDate = new Date(profile.dateOfBirth).toLocaleString('en-CA',
+        {month: 'short', day: 'numeric', year: 'numeric'});
 
     return (
         <>
             <div className="row align-items-center justify-content-start">
+                {/*top summary block*/}
                 <div className="col-auto">
-                    <button type="button" className="btn" title="back">
-                        <i className="bi bi-arrow-left"/>
-                    </button>
+                    <Link to="/tuiter/explore">
+                        <button onClick={() => <ExploreComponent/>} type="button" className="btn">
+                            <i className="bi bi-arrow-left"/>
+                        </button>
+                    </Link>
                 </div>
                 <div className="col-10">
                     <h5 className="fw-bold">{profile.firstName} {profile.lastName}</h5>
@@ -31,7 +32,9 @@ const ProfileComponent = () => {
                     </div>
                 </div>
             </div>
+            {/*banner picture*/}
             <img src={profile.bannerPicture} width="100%" height="250px" alt="..."/>
+            {/*profile picture*/}
             <img src={profile.profilePicture} width="150px" height="150px" className="rounded-circle"
                  style={{position: "relative", marginTop: "-75px", marginLeft: "10px"}}/>
             <Link to="/tuiter/edit-profile">
@@ -40,6 +43,7 @@ const ProfileComponent = () => {
                     Edit Profile
                 </button>
             </Link>
+            {/*profile summary*/}
             <div className="px-3">
                 <h5 className="fw-bold mt-3 ms-1">{profile.firstName} {profile.lastName}</h5>
                 <div className="text-secondary">

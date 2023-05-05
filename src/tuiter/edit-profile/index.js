@@ -40,7 +40,7 @@ const EditProfile = () => {
 
     return (
         <>
-            <div className="row align-items-center justify-content-start pb-1">
+            <div className="row align-items-center pb-1">
                 <div className="col-auto">
                     <Link to="/tuiter/profile" className="btn" title="cancel">
                         <i className="bi bi-x-lg"/>
@@ -48,8 +48,9 @@ const EditProfile = () => {
                 </div>
                 <div className="col-10">
                     <span className="fs-5 fw-bold">Edit Profile</span>
-                    <Link to="/tuiter/profile" className="float-end btn btn-dark rounded-pill fw-bold"
-                          onClick={saveEdit}>Save</Link>
+                    <Link to="/tuiter/profile" className="float-end btn border rounded-pill fw-bold btn-primary"
+                          onClick={saveEdit}>Save
+                    </Link>
                 </div>
             </div>
             <img src={profile.bannerPicture} width="100%" height="250px" alt="..."/>
@@ -59,28 +60,28 @@ const EditProfile = () => {
                 <div className="border w-100 rounded-1 mt-2">
                     <label className="wd-input-label text-secondary ms-2">Name</label>
                     <input type="text"
-                           className="form-control border-0 pt-0"
+                           className="form-control border-0"
                            defaultValue={userName}
                            onChange={(event) => setUserName(event.target.value)}/>
                 </div>
                 <div className="border w-100 rounded-1 mt-4">
                     <label className="wd-input-label text-secondary ms-2">Bio</label>
                     <textarea rows={3}
-                              className="form-control border-0 pt-0"
+                              className="form-control border-0"
                               value={bio}
                               onChange={(event) => setBio(event.target.value)}/>
                 </div>
                 <div className="border w-100 rounded-1 mt-4">
                     <label className="wd-input-label text-secondary ms-2">Location</label>
                     <input type="text"
-                           className="form-control border-0 pt-0"
+                           className="form-control border-0"
                            defaultValue={location}
                            onChange={(event) => setLocation(event.target.value)}/>
                 </div>
                 <div className="border w-100 rounded-1 mt-4">
                     <label className="wd-input-label text-secondary ms-2">Website</label>
                     <input type="text"
-                           className="form-control border-0 pt-0"
+                           className="form-control border-0"
                            defaultValue={website}
                            onChange={(event) => setWebsite(event.target.value)}/>
                 </div>

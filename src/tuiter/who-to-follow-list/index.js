@@ -4,6 +4,7 @@ import WhoToFollowListItem
     from "./who-to-follow-list-item";
 
 const WhoToFollowList = () => {
+    // retrieve state from the store
     const whoArray = useSelector(
         (state) => state.who);
     return(
