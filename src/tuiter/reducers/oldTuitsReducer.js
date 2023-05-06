@@ -20,6 +20,8 @@ const templateTuit = {
 const tuitsSlice = createSlice({
     name: 'tuits',
     initialState: tuits,
+    // A reducer is a pure function in Redux that takes the current state and an action as arguments,
+    // and returns a new state based on the action type, responsible for updating the state in response to dispatched actions
     reducers: {
         createTuit(state, action) {
             state.unshift({

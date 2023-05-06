@@ -9,6 +9,7 @@ const TuitsList = () => {
     const {tuits, loading} = useSelector(state => state.tuitsData)
     const dispatch = useDispatch();
     useEffect(() => {
+        // invoke find tuits thunk to fetch tuits and put them in the reducer's store
         dispatch(findTuitsThunk())
     }, [])
 
